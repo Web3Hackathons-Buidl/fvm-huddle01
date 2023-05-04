@@ -72,7 +72,7 @@ export default function Home() {
                     <div className={styles.modalContent} style={{ width: '90%' }}>
                       <iframe class="rounded-3"
                         id="huddle01-iframe"
-                        src="https://app.huddle01.com/qrh-jwfa-wov"
+                        src="https://app.huddle01.com/0x81D9F3E009"
                         name="myiFrame"
                         scrolling="yes"
                         allowFullScreen
