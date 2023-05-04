@@ -50,48 +50,51 @@ export default function Home() {
 
   return (
     <div>
-      <div className="App"></div>
       <Layout backgroundImage="home">
         <nav className={styles.navbar}>
           <div className={styles.containerFluid}>
-            <Logo />
-            <div className={styles.buttons}>
-              <ThemeButton />
-              <span className="margin-right-wide"></span>
-              <Button
-                className="openModalBtn"
-                onClick={handleModal}
-                bg="dark"
-                text="Join Lobby"
-              />
+          <div className={styles.flexed}>
+              <Logo />
+              <div className={styles.buttons}>
+              
+                <ThemeButton />
+                <span className="margin-right-wide"></span>
+                <Button
+                  className="openModalBtn"
+                  onClick={handleModal}
+                  bg="dark"
+                  text="Join Lobby"
+                />
 
-              <div className={styles.modalContainer}>
+                <div className={styles.modalContainer}>
                 {showModal && (
-                  <div className={styles.modal}>
-                    <div className={styles.modalContent}>
-                      <iframe
+                  <div className={`${styles.modal}`} >
+                    <div className={styles.modalContent} style={{ width: '90%' }}>
+                      <iframe class="rounded-3"
                         id="huddle01-iframe"
                         src="https://app.huddle01.com/qrh-jwfa-wov"
                         name="myiFrame"
-                        scrolling="no"
+                        scrolling="yes"
                         allowFullScreen
                         allow="camera; microphone; clipboard-read; clipboard-write; display-capture"
                       ></iframe>
+
                       <button onClick={handleModal}>X</button>
                     </div>
-                  </div>
-                )}
+                  </div>                
+                  )}
+                </div>
+                <span className="margin-right-wide"></span>
+                <Button
+                  className="openModalBtn"
+                  onClick={() => {
+                    setOpenModal(true);
+                  }}
+                  bg="greenToPurple"
+                  spread="gradient"
+                  text="Login"
+                />
               </div>
-              <span className="margin-right-wide"></span>
-              <Button
-                className="openModalBtn"
-                onClick={() => {
-                  setOpenModal(true);
-                }}
-                bg="greenToPurple"
-                spread="gradient"
-                text="Login"
-              />
             </div>
           </div>
         </nav>

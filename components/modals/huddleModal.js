@@ -2,8 +2,8 @@ import React from 'react';
  
 function huddleModal({ closeModal }) {
   return (
-    <div className='modalBackground'>
-        <div className='modalContainer'>
+    <div className='modalBackground w-80'>
+        <div className='modalContainer w-80'>
             <button onClick={() => closeModal(false)}>X</button>
             <div className='title'>
                 <h1>Join Lobby</h1>

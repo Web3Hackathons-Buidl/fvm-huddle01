@@ -18,14 +18,15 @@ huddleIframeApp.methods.muteMic();
 const iframeConfig = {
     roomUrl: "https://iframe.huddle01.com/123",
     height: "600px",
-    width: "80%",
+    width: "100%",
     noBorder: false, // false by default
+    border-radius: 10px
 };
  
 function App() {
     return (
         <div>
-            <HuddleIframe config={iframeConfig} />
+            <HuddleIframe   config={iframeConfig} />
         </div>
     );
 }

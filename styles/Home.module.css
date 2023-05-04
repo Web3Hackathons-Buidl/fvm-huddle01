@@ -8,6 +8,39 @@
   top: 0;
 }
 
+
+.flexed {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.flex-con {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.logo {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons button {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-left: 5px;
+}
+
+
 .containerFluid{
   display: -ms-flexbox;
     display: flex;
@@ -54,6 +87,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  border-radius: 20px;
 }
 
 .modal {
@@ -66,6 +100,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: hidden;  
 }
 
 .modalContent {
@@ -73,12 +108,33 @@
   background-color: white;
   padding: 2rem;
   text-align: center;
+  width: 80%;
+  border-radius: 10px;
+  overflow-y: hidden;
+  scrollbar-width: 2px;
+  overflow: hidden;
 }
 
 .modalContent iframe {
   width: 100%;
   height: 80vh;
   border: none;
+  border-radius: 20px;
+  overflow-y: hidden; /* Enable vertical scrollbar */
+  scrollbar-width: thin; /* Width of the scrollbar */
+  scrollbar-color: #777 #eee;
+}
+
+.modal::-webkit-scrollbar {
+  width: 1px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background-color: #777;
+}
+
+.modal::-webkit-scrollbar-track {
+  background-color: #eee;
 }
 
 .modalContent button {
@@ -91,6 +147,10 @@
   border-radius: 0.5rem;
   cursor: pointer;
 }
+
+
+
+
 /* .StaticContainer {
   position: absolute;
   top: 35%;
